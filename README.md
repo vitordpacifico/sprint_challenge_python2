@@ -67,3 +67,6 @@
                             |
                             V
 <p>Logs: Cada interação do usuário com o sistema (seleção de equipe, piloto, ou erros) é registrada em um arquivo de log que será salvo como .txt</p>
+
+<h2>Link do video apresentação do código</h2>
+<p>https://youtu.be/8uk5UzGoOWk</p>
