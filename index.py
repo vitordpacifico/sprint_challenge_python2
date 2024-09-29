@@ -45,7 +45,7 @@ infos_equipes = {
     "Venturi Racing": "Venturi Racing é uma das equipes fundadoras da Fórmula E, conhecida por sua paixão por corridas e compromisso com a mobilidade elétrica.",
 }
 
-# Função que agrupa pilotos por equipe
+# função que agrupa pilotos por equipe
 def agrupar_por_equipe(pilotos):
     equipes = {}
     for piloto in pilotos:
@@ -55,7 +55,6 @@ def agrupar_por_equipe(pilotos):
         equipes[equipe].append(piloto)
     return equipes
 
-# Função que gera um novo nome de arquivo para o log
 def gerar_nome_arquivo_log():
     contador = 1
     while True:
@@ -64,7 +63,7 @@ def gerar_nome_arquivo_log():
             return nome_arquivo
         contador += 1
 
-# Função que mostra as informações detalhadas de um piloto
+# função que mostra as informações detalhadas de um piloto
 def mostrar_informacoes_piloto(piloto, nome_arquivo_log):
     info = (
         f"\nNome do Piloto: {piloto['nome']}\n"
@@ -80,7 +79,7 @@ def mostrar_informacoes_piloto(piloto, nome_arquivo_log):
     
     print(info)
 
-# Função para seleção de piloto e exibição de informações
+# função para seleção de piloto e exibição de informações
 def selecionar_piloto(equipe, pilotos, nome_arquivo_log):
     while True:
         print(f"\nPilotos da equipe {equipe}:")
@@ -104,7 +103,7 @@ def selecionar_piloto(equipe, pilotos, nome_arquivo_log):
                 log_file.write("\nEntrada inválida no menu de seleção de piloto.\n")
             print("Comando inválido, insira um número válido.")
 
-# Função para seleção de equipe e exibição de informações
+# função para selecionar a equipe e exibir informações
 def selecionar_equipe(equipes, nome_arquivo_log):
     lista_equipes = list(equipes.keys())
     while True:
@@ -131,27 +130,26 @@ def selecionar_equipe(equipes, nome_arquivo_log):
                 log_file.write("Entrada inválida no menu de seleção de equipe.\n")
             print("Comando inválido, insira um número válido.")
 
-# Função principal da aplicação
+# função da tela principal
 def tela_principal():
     print("Galeria dos Pilotos de Fórmula E")
     print("="*30)
     
-    # Gerando um nome de arquivo único para o log
+    
     nome_arquivo_log = gerar_nome_arquivo_log()
     
     equipes = agrupar_por_equipe(infos_pilotos)
     selecionar_equipe(equipes, nome_arquivo_log)
 
-# Função de teste automatizado simples
+# função do teste automatizado
 def test_agrupar_por_equipe():
     equipes = agrupar_por_equipe(infos_pilotos)
     assert "DS Penske" in equipes, "Teste falhou: 'DS Penske' não encontrada."
     assert len(equipes["DS Penske"]) == 2, "Teste falhou: Número incorreto de pilotos na equipe DS Penske."
     
-    # Gerando um nome de arquivo para registrar o teste
     nome_arquivo_log = gerar_nome_arquivo_log()
 
-# Executando testes e inicializando a aplicação
+# inicializando o sistema
 if __name__ == "__main__":
     test_agrupar_por_equipe()
     tela_principal()
