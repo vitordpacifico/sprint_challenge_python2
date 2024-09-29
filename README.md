@@ -32,39 +32,25 @@
 <h2>Diagrama em blocos do código</h2>
 
 <p>Início da aplicação: O sistema é iniciado e mostra um menu de seleção de equipes para o usuário</p>
-                            |
-                            |
-                            |
+                            
                             V
 <p>Seleção de Equipe: O usuário pode escolher uma equipe da lista para ver informações</p>
-                            |
-                            |
-                            |
+                           
                             V
 <p>Se o número digitado for inválido, ele irá retornar ao menu de seleção de equipes</p>
-                            |
-                            |
-                            |
+                          
                             V
 <p>Seleção de Pilotos: O usuário escolhe um piloto da equipe selecionada para se obter informações</p>
-                            |
-                            |
-                            |
+                           
                             V
 <p>Se o número digitado for inválido, ele irá retornar ao menu de seleção de piloto</p>
-                            |
-                            |
-                            |
+                           
                             V
 <p>Se for válido, irá exibir as informações detalhadas do piloto escolhido</p>
-                            |
-                            |
-                            |
+                            
                             V
 <p>Retornar ao Menu Principal: O usuário pode optar por voltar ao menu principal ou sair do sistema</p>
-                            |
-                            |
-                            |
+                            
                             V
 <p>Logs: Cada interação do usuário com o sistema (seleção de equipe, piloto, ou erros) é registrada em um arquivo de log que será salvo como .txt</p>
 
